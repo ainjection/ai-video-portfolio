@@ -3,145 +3,272 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Video Production — Showreels</title>
-<meta name="description" content="Cinematic ads, UGC at scale, real-estate tours and brand content — produced with AI, delivered fast." />
+<title>AI Injection — AI Video Production, Books & Creator Tools</title>
+<meta name="description" content="Cinematic ads, UGC at scale, real-estate tours, floor-plan-to-3D renders, publish-ready children's books and the AI tools behind them — produced end to end, delivered in days." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0e14'/%3E%3Cpath d='M12 9l12 7-12 7z' fill='%2367E8F9'/%3E%3C/svg%3E">
+<meta property="og:title" content="AI Injection — AI Video Production, Books & Creator Tools" />
+<meta property="og:description" content="Cinematic ads, UGC at scale, real-estate tours, floor-plan-to-3D renders and publish-ready books — produced with AI, delivered in days." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ainjection.github.io/ai-video-portfolio/" />
+<meta property="og:image" content="https://ainjection.github.io/ai-video-portfolio/videos/poster-cinematic.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"AI Injection","url":"https://ainjection.github.io/ai-video-portfolio/","description":"AI video production: ads, UGC at scale, real-estate and architectural visualisation, animated characters and publish-ready books.","email":"pprholdings123@gmail.com","sameAs":["https://www.youtube.com/@AiInjection-i2p","https://www.skool.com/ai-injection-4241"]}
+</script>
 <style>
   :root{--bg:#0b0e14;--card:#11151f;--cyan:#67E8F9;--mut:#9aa6b8;}
   *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{background:var(--bg);color:#fff;font-family:Inter,system-ui,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
   .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-  header{padding:90px 0 50px;text-align:center}
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+  nav .row{display:flex;align-items:center;gap:20px;padding:13px 22px;max-width:1180px;margin:0 auto}
+  nav .brand{font-weight:800;letter-spacing:-.5px;color:#fff;text-decoration:none;font-size:16px;white-space:nowrap}
+  nav .brand span{color:var(--cyan)}
+  nav .links{display:flex;gap:16px;flex:1;overflow-x:auto;scrollbar-width:none}
+  nav .links::-webkit-scrollbar{display:none}
+  nav a.nl{color:var(--mut);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+  nav a.nl:hover{color:var(--cyan)}
+  nav .hire{background:var(--cyan);color:#06121a;font-weight:700;padding:8px 18px;border-radius:30px;text-decoration:none;font-size:13px;white-space:nowrap}
+  header{padding:74px 0 34px;text-align:center}
   .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:14px;margin-bottom:20px}
   .eyebrow .dot{width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px 2px rgba(103,232,249,.8)}
   h1{font-size:clamp(34px,6vw,68px);font-weight:800;letter-spacing:-1.5px;line-height:1.05}
   h1 .grad{background:linear-gradient(120deg,#67E8F9,#34d399);-webkit-background-clip:text;background-clip:text;color:transparent}
   .sub{color:var(--mut);font-size:clamp(16px,2.2vw,21px);max-width:680px;margin:22px auto 0}
-  .cta{display:inline-block;margin-top:34px;background:var(--cyan);color:#06121a;font-weight:700;padding:15px 34px;border-radius:40px;text-decoration:none;font-size:16px;transition:transform .15s}
+  .cta{display:inline-block;margin-top:32px;background:var(--cyan);color:#06121a;font-weight:700;padding:15px 34px;border-radius:40px;text-decoration:none;font-size:16px;transition:transform .15s}
   .cta:hover{transform:translateY(-2px)}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;padding:24px 0 40px}
+  .stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding:34px 0 10px}
+  .stat{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 26px;text-align:center;min-width:150px}
+  .stat b{display:block;font-size:26px;letter-spacing:-.5px;color:var(--cyan)}
+  .stat span{color:var(--mut);font-size:13px}
+  .sec{padding-top:64px}
+  .sec h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.5px}
+  .sec .secsub{color:var(--mut);margin:6px 0 4px;max-width:720px}
+  .seclink{color:var(--cyan);text-decoration:none;font-weight:600;font-size:15px}
+  .seclink:hover{text-decoration:underline}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;padding:24px 0 8px}
   @media(max-width:760px){.grid{grid-template-columns:1fr}}
   .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
-  .card video{width:100%;display:block;background:#000;max-height:560px;object-fit:contain}
-  .card img{width:100%;display:block;background:#000;max-height:560px;object-fit:contain}
+  .card video,.card img.shot{width:100%;display:block;background:#000;max-height:560px;object-fit:contain}
   .card .meta{padding:18px 22px 22px}
   .card .tag{color:var(--cyan);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:12px}
   .card h3{font-size:22px;font-weight:700;margin:6px 0 4px}
   .card p{color:var(--mut);font-size:15px}
-  .strip{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:14px 0 70px}
+  .card a{color:var(--cyan)}
+  .linkcard{justify-content:center;padding:30px 26px;background:linear-gradient(150deg,#11151f, #0d1b1e);border:1px solid rgba(103,232,249,.25)}
+  .linkcard h3{margin-top:0}
+  .strip{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:44px 0 40px}
   .chip{border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:9px 18px;color:var(--mut);font-size:14px}
-  footer{border-top:1px solid rgba(255,255,255,.08);padding:46px 0 70px;text-align:center}
+  footer{border-top:1px solid rgba(255,255,255,.08);padding:46px 0 70px;text-align:center;margin-top:40px}
   footer h2{font-size:clamp(24px,4vw,38px);font-weight:800;letter-spacing:-.5px}
   footer p{color:var(--mut);margin:12px 0 26px}
+  .ctarow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta2{display:inline-block;border:1px solid var(--cyan);color:var(--cyan);font-weight:700;padding:14px 28px;border-radius:40px;text-decoration:none;font-size:15px}
+  .cta2:hover{background:rgba(103,232,249,.1)}
   .small{color:#5b6675;font-size:13px;margin-top:40px}
 </style>
 </head>
 <body>
-  <header class="wrap">
+  <nav><div class="row">
+    <a class="brand" href="#top">AI<span>·</span>INJECTION</a>
+    <div class="links">
+      <a class="nl" href="#ads">Ads & UGC</a>
+      <a class="nl" href="#property">Property & 3D</a>
+      <a class="nl" href="#animation">Animation</a>
+      <a class="nl" href="#books">Books</a>
+      <a class="nl" href="#tools">Tools</a>
+    </div>
+    <a class="hire" href="mailto:pprholdings123@gmail.com?subject=AI%20Video%20Project">Hire me</a>
+  </div></nav>
+
+  <header class="wrap" id="top">
     <div class="eyebrow"><span class="dot"></span>AI Video Production</div>
     <h1>Scroll-stopping video,<br><span class="grad">made with AI.</span></h1>
     <p class="sub">Cinematic ads, UGC at scale, real-estate tours, floor-plan-to-3D renders and brand content — produced end to end with AI and delivered in days, not weeks.</p>
-    <a class="cta" href="#contact">Work with me →</a>
+    <a class="cta" href="mailto:pprholdings123@gmail.com?subject=AI%20Video%20Project">Work with me →</a>
+    <div class="stats">
+      <div class="stat"><b>75</b><span>AI ads in 7 days</span></div>
+      <div class="stat"><b>25+</b><span>books published</span></div>
+      <div class="stat"><b>27</b><span>showreels below</span></div>
+      <div class="stat"><b>Days</b><span>not weeks, delivery</span></div>
+    </div>
   </header>
 
-  <section class="wrap">
+  <section class="wrap sec" id="ads">
+    <h2>Ads, UGC & product films</h2>
+    <p class="secsub">Creator-style ads on demand, photoreal product reveals and talking-presenter formats — any product, any platform, 9:16 or 16:9.</p>
     <div class="grid">
       <div class="card">
-        <video src="videos/animated-shorts-reel.mp4" controls preload="metadata" playsinline></video>
-        <div class="meta"><div class="tag">Animated shorts &middot; any style</div><h3>Talking-character story shorts</h3><p>Custom characters that actually talk, kept consistent across every scene &mdash; Pixar 3D, anime or storybook. Story-driven shorts with a twist, for brands, books, mascots and personal films.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/ironroot.mp4" controls preload="metadata" playsinline poster="videos/poster-ironroot.jpg"></video>
+        <video src="videos/ironroot.mp4" controls preload="none" playsinline poster="videos/poster-ironroot.jpg"></video>
         <div class="meta"><div class="tag">Animated &middot; comedy</div><h3>Animated comedy ads</h3><p>Satirical cartoon skits with consistent characters, multi-voice VO and meme captions &mdash; scroll-stopping product demos.</p></div>
       </div>
       <div class="card">
-        <video src="videos/skincare-ad.mp4" controls preload="metadata" playsinline poster="videos/poster-skincare.jpg"></video>
+        <video src="videos/skincare-ad.mp4" controls preload="none" playsinline poster="videos/poster-skincare.jpg"></video>
         <div class="meta"><div class="tag">Skincare &middot; DTC</div><h3>Skincare transformation ads</h3><p>Photoreal macro skin transformations and 3D medical-explainer animations &mdash; healing time-lapses, barrier cross-sections, synced captions, full ad assembly.</p></div>
       </div>
       <div class="card">
-        <video src="videos/kdp-books.mp4" controls preload="metadata" playsinline poster="videos/poster-kdp-books.jpg"></video>
-        <div class="meta"><div class="tag">Children's books</div><h3>Complete KDP children's books</h3><p>Story books, fine-art picture books and coloring books &mdash; written, illustrated and publish-ready, with the same locked character on every page.</p></div>
+        <video src="videos/ugc.mp4" controls preload="none" playsinline poster="videos/poster-ugc.jpg"></video>
+        <div class="meta"><div class="tag">UGC at scale</div><h3>UGC ads, on demand</h3><p>Dozens of authentic creator-style ads &mdash; any product, any niche.</p></div>
       </div>
       <div class="card">
-        <video src="videos/sports-ad.mp4" controls preload="metadata" playsinline poster="videos/poster-sports.jpg"></video>
-        <div class="meta"><div class="tag">Sportswear</div><h3>Sportswear &amp; footwear ads</h3><p>Fast-cut, beat-synced product films &mdash; speed ramps, kinetic type and colourway reveals.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/ugc.mp4" controls preload="metadata" playsinline poster=""></video>
-        <div class="meta"><div class="tag">UGC at scale</div><h3>UGC ads, on demand</h3><p>Dozens of authentic creator-style ads — any product, any niche.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/cinematic.mp4" controls preload="metadata" playsinline></video>
-        <div class="meta"><div class="tag">Cinematic</div><h3>Cinematic brand films</h3><p>Photoreal, film-grade visuals for promos and brand campaigns.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/realestate-reel.mp4" controls preload="metadata" playsinline poster="videos/poster-realestate.jpg"></video>
-        <div class="meta"><div class="tag">Real estate</div><h3>Property tour reels</h3><p>Scroll-stopping 9:16 listing reels — aerials, interiors and amenities, captioned and ready to post.</p></div>
-      </div>
-      <div class="card">
-        <img src="videos/floorplan-render-1.jpg" alt="2D floor plan transformed into a photoreal 3D luxury home render" loading="lazy">
-        <div class="meta"><div class="tag">Architecture &middot; 2D&rarr;3D</div><h3>Floor plan to photoreal 3D</h3><p>Turn a flat 2D floor plan into a luxury photoreal 3D home &mdash; exact layout, rooms and proportions preserved.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/floorplan-walkthrough.mp4" controls preload="metadata" playsinline poster="videos/poster-floorplan-walk.jpg"></video>
-        <div class="meta"><div class="tag">Architecture &middot; walkthrough</div><h3>3D floor-plan walkthrough</h3><p>One cinematic take from the 2D plan &mdash; it builds into the 3D home, then glides room to room. Show a property before it&rsquo;s built.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/blueprint-reality.mp4" controls preload="metadata" playsinline poster="videos/poster-blueprint.jpg"></video>
-        <div class="meta"><div class="tag">Architecture &middot; transform</div><h3>Blueprint to reality</h3><p>Watch a glowing blueprint rise into a finished photoreal home &mdash; walls, roof, pool and landscaping built in one seamless take.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/dubai-walkthrough.mp4" controls preload="metadata" playsinline poster="videos/poster-dubai.jpg"></video>
-        <div class="meta"><div class="tag">Real estate &middot; luxury</div><h3>Luxury property walkthrough</h3><p>Storyboard stills built into one cinematic 9:16 tour &mdash; exterior, interiors and skyline, scroll-ready for high-end listings.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/fpv-character-flythrough.mp4" controls preload="metadata" playsinline poster="videos/poster-fpv.jpg"></video>
-        <div class="meta"><div class="tag">FPV &middot; characters</div><h3>FPV character flythrough</h3><p>One continuous FPV shot weaving through a scene of consistent AI characters &mdash; face-locked close-ups, one to the next, luxury 9:16.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/brand.mp4" controls preload="metadata" playsinline></video>
-        <div class="meta"><div class="tag">Brand &amp; product</div><h3>Product &amp; brand content</h3><p>Studio-grade product films and consistent on-brand creators.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/glowlab-podcast.mp4" controls preload="metadata" playsinline poster="videos/poster-podcast.jpg"></video>
-        <div class="meta"><div class="tag">AI ad &middot; talking head</div><h3>Expert &amp; podcast-style ads</h3><p>Lip-synced AI presenters, consistent across scenes, B-roll and karaoke captions.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/glowlab-debate.mp4" controls preload="metadata" playsinline poster="videos/poster-debate.jpg"></video>
-        <div class="meta"><div class="tag">AI ad &middot; debate</div><h3>Split-screen debate ads</h3><p>Two consistent characters, scroll-stopping hooks, cut over real b-roll.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/ugc-fast.mp4" controls preload="metadata" playsinline poster="videos/poster-ugcfast.jpg"></video>
+        <video src="videos/ugc-fast.mp4" controls preload="none" playsinline poster="videos/poster-ugcfast.jpg"></video>
         <div class="meta"><div class="tag">UGC at volume</div><h3>Creator ads at scale</h3><p>Dozens of UGC clips, beat-synced &mdash; test creative fast.</p></div>
       </div>
       <div class="card">
-        <video src="videos/glowlab-animated.mp4" controls preload="metadata" playsinline poster="videos/poster-animated.jpg"></video>
+        <video src="videos/ugc-beauty.mp4" controls preload="none" playsinline poster="videos/poster-ugc-beauty.jpg"></video>
+        <div class="meta"><div class="tag">UGC &middot; beauty</div><h3>Beauty UGC ads</h3><p>Authentic creator-style skincare and beauty ads, made on demand.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/glowlab-podcast.mp4" controls preload="none" playsinline poster="videos/poster-podcast.jpg"></video>
+        <div class="meta"><div class="tag">AI ad &middot; talking head</div><h3>Expert &amp; podcast-style ads</h3><p>Lip-synced AI presenters, consistent across scenes, B-roll and karaoke captions.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/glowlab-debate.mp4" controls preload="none" playsinline poster="videos/poster-debate.jpg"></video>
+        <div class="meta"><div class="tag">AI ad &middot; debate</div><h3>Split-screen debate ads</h3><p>Two consistent characters, scroll-stopping hooks, cut over real b-roll.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/glowlab-animated.mp4" controls preload="none" playsinline poster="videos/poster-animated.jpg"></video>
         <div class="meta"><div class="tag">Animated</div><h3>3D animated ads</h3><p>Pixar-style character ads with punchy captions &mdash; perfect for health &amp; skincare.</p></div>
       </div>
       <div class="card">
-        <video src="videos/animated-mascot.mp4" controls preload="metadata" playsinline poster="videos/poster-animated-mascot.jpg"></video>
-        <div class="meta"><div class="tag">Animated &middot; mascot</div><h3>3D character mascots</h3><p>Adorable, consistent animated mascots &mdash; brand spokescharacters that stop the scroll.</p></div>
+        <video src="videos/sports-ad.mp4" controls preload="none" playsinline poster="videos/poster-sports.jpg"></video>
+        <div class="meta"><div class="tag">Sportswear</div><h3>Sportswear &amp; footwear ads</h3><p>Fast-cut, beat-synced product films &mdash; speed ramps, kinetic type and colourway reveals.</p></div>
       </div>
       <div class="card">
-        <video src="videos/animated-story.mp4" controls preload="metadata" playsinline poster="videos/poster-animated-story.jpg"></video>
-        <div class="meta"><div class="tag">Animated &middot; story</div><h3>Animated story ads</h3><p>Character-driven 3D skits with talking products and mascots &mdash; personality-packed product tales.</p></div>
-      </div>
-      <div class="card">
-        <video src="videos/perfume.mp4" controls preload="metadata" playsinline poster="videos/poster-perfume.jpg"></video>
+        <video src="videos/perfume.mp4" controls preload="none" playsinline poster="videos/poster-perfume.jpg"></video>
         <div class="meta"><div class="tag">Luxury</div><h3>Fragrance &amp; beauty films</h3><p>Cinematic, sensual brand teasers &mdash; grade, glow and elegant type from raw clips.</p></div>
       </div>
       <div class="card">
-        <video src="videos/product-earbuds.mp4" controls preload="metadata" playsinline poster="videos/poster-product-earbuds.jpg"></video>
+        <video src="videos/product-earbuds.mp4" controls preload="none" playsinline poster="videos/poster-product-earbuds.jpg"></video>
         <div class="meta"><div class="tag">Product demo</div><h3>Product demo films</h3><p>Photoreal product reveals for e-commerce and DTC &mdash; no studio, no shoot day.</p></div>
       </div>
       <div class="card">
-        <video src="videos/product-beverage.mp4" controls preload="metadata" playsinline poster="videos/poster-product-beverage.jpg"></video>
+        <video src="videos/product-beverage.mp4" controls preload="none" playsinline poster="videos/poster-product-beverage.jpg"></video>
         <div class="meta"><div class="tag">Beverage</div><h3>Beverage &amp; FMCG ads</h3><p>High-energy product films &mdash; dramatic lighting, motion and splash, all AI.</p></div>
       </div>
       <div class="card">
-        <video src="videos/ugc-beauty.mp4" controls preload="metadata" playsinline poster="videos/poster-ugc-beauty.jpg"></video>
-        <div class="meta"><div class="tag">UGC &middot; beauty</div><h3>Beauty UGC ads</h3><p>Authentic creator-style skincare and beauty ads, made on demand.</p></div>
+        <video src="videos/brand.mp4" controls preload="none" playsinline poster="videos/poster-brand.jpg"></video>
+        <div class="meta"><div class="tag">Brand &amp; product</div><h3>Product &amp; brand content</h3><p>Studio-grade product films and consistent on-brand creators.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/cinematic.mp4" controls preload="none" playsinline poster="videos/poster-cinematic.jpg"></video>
+        <div class="meta"><div class="tag">Cinematic</div><h3>Cinematic brand films</h3><p>Photoreal, film-grade visuals for promos and brand campaigns.</p></div>
       </div>
     </div>
+  </section>
+
+  <section class="wrap sec" id="property">
+    <h2>Real estate & architecture</h2>
+    <p class="secsub">Listing reels that stop the scroll, and floor plans that become photoreal homes before they're built. <a class="seclink" href="https://ainjection.github.io/realestate-tiers-landing/" target="_blank" rel="noopener">See listing-video packages →</a></p>
+    <div class="grid">
+      <div class="card">
+        <video src="videos/esplanade-listing.mp4" controls preload="none" playsinline poster="videos/poster-esplanade-listing.jpg"></video>
+        <div class="meta"><div class="tag">Real listing &middot; UK</div><h3>Real UK listing reel — 17 Esplanade</h3><p>An actual property, hooked and cut for social &mdash; the format agents run to fill viewings. Not a concept: a real address, ready-to-post.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/penthouse-showcase.mp4" controls preload="none" playsinline poster="videos/poster-penthouse-showcase.jpg"></video>
+        <div class="meta"><div class="tag">Luxury showcase</div><h3>Penthouse showcase film</h3><p>High-end penthouse film &mdash; glide, glow and skyline, graded for the luxury market.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/realestate-reel.mp4" controls preload="none" playsinline poster="videos/poster-realestate.jpg"></video>
+        <div class="meta"><div class="tag">Real estate</div><h3>Property tour reels</h3><p>Scroll-stopping 9:16 listing reels &mdash; aerials, interiors and amenities, captioned and ready to post.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/dubai-walkthrough.mp4" controls preload="none" playsinline poster="videos/poster-dubai.jpg"></video>
+        <div class="meta"><div class="tag">Real estate &middot; luxury</div><h3>Luxury property walkthrough</h3><p>Storyboard stills built into one cinematic 9:16 tour &mdash; exterior, interiors and skyline, scroll-ready for high-end listings.</p></div>
+      </div>
+      <div class="card">
+        <img class="shot" src="videos/floorplan-render-1.jpg" alt="2D floor plan transformed into a photoreal 3D luxury home render" loading="lazy">
+        <div class="meta"><div class="tag">Architecture &middot; 2D&rarr;3D</div><h3>Floor plan to photoreal 3D</h3><p>Turn a flat 2D floor plan into a luxury photoreal 3D home &mdash; exact layout, rooms and proportions preserved.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/floorplan-walkthrough.mp4" controls preload="none" playsinline poster="videos/poster-floorplan-walk.jpg"></video>
+        <div class="meta"><div class="tag">Architecture &middot; walkthrough</div><h3>3D floor-plan walkthrough</h3><p>One cinematic take from the 2D plan &mdash; it builds into the 3D home, then glides room to room. Show a property before it&rsquo;s built.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/blueprint-reality.mp4" controls preload="none" playsinline poster="videos/poster-blueprint.jpg"></video>
+        <div class="meta"><div class="tag">Architecture &middot; transform</div><h3>Blueprint to reality</h3><p>Watch a glowing blueprint rise into a finished photoreal home &mdash; walls, roof, pool and landscaping built in one seamless take.</p></div>
+      </div>
+      <div class="card linkcard">
+        <div class="tag">Packages</div>
+        <h3>Listing videos, priced simply</h3>
+        <p>Five tiers for agents and developers — from a single captioned reel to full cinematic tours with 3D renders. <a href="https://ainjection.github.io/realestate-tiers-landing/" target="_blank" rel="noopener">View the packages →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="animation">
+    <h2>Animation & characters</h2>
+    <p class="secsub">Custom characters that talk, stay consistent scene to scene, and carry a story — Pixar 3D, anime or storybook.</p>
+    <div class="grid">
+      <div class="card">
+        <video src="videos/animated-shorts-reel.mp4" controls preload="none" playsinline poster="videos/poster-animated-shorts-reel.jpg"></video>
+        <div class="meta"><div class="tag">Animated shorts &middot; any style</div><h3>Talking-character story shorts</h3><p>Custom characters that actually talk, kept consistent across every scene &mdash; Pixar 3D, anime or storybook. Story-driven shorts with a twist, for brands, books, mascots and personal films.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/animated-mascot.mp4" controls preload="none" playsinline poster="videos/poster-animated-mascot.jpg"></video>
+        <div class="meta"><div class="tag">Animated &middot; mascot</div><h3>3D character mascots</h3><p>Adorable, consistent animated mascots &mdash; brand spokescharacters that stop the scroll.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/animated-story.mp4" controls preload="none" playsinline poster="videos/poster-animated-story.jpg"></video>
+        <div class="meta"><div class="tag">Animated &middot; story</div><h3>Animated story ads</h3><p>Character-driven 3D skits with talking products and mascots &mdash; personality-packed product tales.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/fpv-character-flythrough.mp4" controls preload="none" playsinline poster="videos/poster-fpv.jpg"></video>
+        <div class="meta"><div class="tag">FPV &middot; characters</div><h3>FPV character flythrough</h3><p>One continuous FPV shot weaving through a scene of consistent AI characters &mdash; face-locked close-ups, one to the next, luxury 9:16.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="books">
+    <h2>Books & publishing</h2>
+    <p class="secsub">Not just video — complete, publish-ready books: written, illustrated, typeset and on Amazon. 25+ titles live. <a class="seclink" href="https://ainjection.github.io/gentle-bookshop/" target="_blank" rel="noopener">Browse the bookshop →</a></p>
+    <div class="grid">
+      <div class="card">
+        <video src="videos/kdp-books.mp4" controls preload="none" playsinline poster="videos/poster-kdp-books.jpg"></video>
+        <div class="meta"><div class="tag">Children's books</div><h3>Complete KDP children's books</h3><p>Story books, fine-art picture books and coloring books &mdash; written, illustrated and publish-ready, with the same locked character on every page.</p></div>
+      </div>
+      <div class="card">
+        <video src="videos/book-short.mp4" controls preload="none" playsinline poster="videos/poster-book-short.jpg"></video>
+        <div class="meta"><div class="tag">Book marketing</div><h3>Book marketing shorts</h3><p>Flip-through shorts with voiceover and music that sell books on TikTok, Shorts and Pinterest &mdash; the missing half of self-publishing.</p></div>
+      </div>
+      <div class="card linkcard">
+        <div class="tag">Publishing system</div>
+        <h3>From niche data to finished book</h3>
+        <p>Every title starts with live Amazon demand scoring, competitor-informed covers and a code-generated interior that passes KDP's checks first time. The latest book went from niche score to submitted-for-review in one evening. <a href="https://ainjection.github.io/gentle-bookshop/" target="_blank" rel="noopener">See the published shelf →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="tools">
+    <h2>Tools I build & use</h2>
+    <p class="secsub">The pipeline is the product — these are open tools I built to make the work above repeatable.</p>
+    <div class="grid">
+      <div class="card linkcard">
+        <div class="tag">Chrome extension</div>
+        <h3>AutoImage</h3>
+        <p>Batch-drives Google Flow: feed it a JSON of scene prompts (or a storyboard with reference panels) and it generates, files and names every image and clip hands-off. <a href="https://github.com/ainjection/AutoImage" target="_blank" rel="noopener">On GitHub →</a></p>
+      </div>
+      <div class="card linkcard">
+        <div class="tag">MCP server</div>
+        <h3>KDP Niche Scorer</h3>
+        <p>Feed it a keyword, get an opinionated 0-100 niche score from BSR, competitor counts and review velocity — AI-native, hosted on MCPize. <a href="https://github.com/ainjection/kdp-niche-scorer-mcp" target="_blank" rel="noopener">On GitHub →</a></p>
+      </div>
+      <div class="card linkcard">
+        <div class="tag">Web app</div>
+        <h3>HyperEdit</h3>
+        <p>AI video editor that turns raw clips into cut, captioned, music-bedded edits. <a href="https://github.com/ainjection/hyperedit" target="_blank" rel="noopener">On GitHub →</a></p>
+      </div>
+      <div class="card linkcard">
+        <div class="tag">Community</div>
+        <h3>AI Injection on Skool</h3>
+        <p>The systems behind everything on this page, taught step by step — prompts, pipelines and member drops. <a href="https://www.skool.com/ai-injection-4241/about" target="_blank" rel="noopener">Visit the community →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
     <div class="strip">
       <span class="chip">Product ads</span><span class="chip">UGC creators</span><span class="chip">Real estate</span>
       <span class="chip">Cinematic promos</span><span class="chip">Fashion &amp; beauty</span><span class="chip">9:16 &amp; 16:9</span>
@@ -154,7 +281,11 @@
   <footer id="contact" class="wrap">
     <h2>Need video that converts?</h2>
     <p>Tell me the product and the platform — I'll handle the rest.</p>
-    <a class="cta" href="mailto:pprholdings123@gmail.com?subject=AI%20Video%20Project">Get in touch →</a>
+    <div class="ctarow">
+      <a class="cta" style="margin-top:0" href="mailto:pprholdings123@gmail.com?subject=AI%20Video%20Project">Get in touch →</a>
+      <a class="cta2" href="mailto:pprholdings123@gmail.com?subject=Listing%20Video%20Enquiry">Property listing videos</a>
+      <a class="cta2" href="mailto:pprholdings123@gmail.com?subject=Book%20Project">Book projects</a>
+    </div>
     <p class="small">Everything on this page was produced with AI. Cleared for commercial use.</p>
   </footer>
 </body>
